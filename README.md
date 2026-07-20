@@ -1,27 +1,16 @@
-# Gopika & Siva Wedding Website
+# Gopika & Siva — Wedding Website
 
-A static, mobile-friendly wedding website ready for GitHub Pages.
+A mobile-first Kerala × Telugu fusion wedding website for the celebrations of Gopika Sreeshan and Siva Shankar Kinthada.
 
-## Publish on GitHub Pages
+## Updating the live GitHub Pages site
 
-1. Sign in to GitHub and create a new **public** repository, for example: `gopika-siva-wedding`.
-2. Upload all files and folders from this package to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select branch **main** and folder **/(root)**, then click **Save**.
-6. GitHub will display a live URL similar to:
-   `https://YOUR-USERNAME.github.io/gopika-siva-wedding/`
+1. Open the `Gopika-Siva-Wedding` repository on GitHub.
+2. Choose **Add file → Upload files**.
+3. Upload `index.html`, `styles.css`, and `script.js` from this package.
+4. Keep the existing `calendar` folder and `.ics` files, or upload the complete package contents.
+5. Choose **Commit changes**.
+6. GitHub Pages will normally publish the update within a few minutes.
 
-Keep the repository and page URL unchanged after printing the QR code.
+## Later additions
 
-## Update the contact person later
-
-Open `index.html`, find:
-
-`Contact details will be added soon.`
-
-Replace it with the contact name and phone number, then commit the change. The live page updates while the QR code remains the same.
-
-## Important before printing
-
-Open every map button and calendar link on a phone. Confirm all names, times, locations and meal details. After the GitHub Pages URL is final, generate the QR code and test it on both Android and iPhone before printing invitations.
+The contact section can be changed directly in `index.html`. A couple photo can also be added later without changing the QR code, because the website address will remain the same.
