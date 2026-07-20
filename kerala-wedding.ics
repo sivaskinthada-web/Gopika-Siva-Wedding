@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gopika and Siva Wedding//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:kerala-wedding-20261226@gopika-siva
+DTSTAMP:20260720T000000Z
+DTSTART;TZID=Asia/Kolkata:20261226T103000
+DTEND;TZID=Asia/Kolkata:20261226T143000
+SUMMARY:Gopika & Siva — Kerala-style Wedding
+LOCATION:Sadhoo Kalyana Mandapam, Kannur, Kerala, India
+DESCRIPTION:Kerala-style wedding ceremony followed by vegetarian lunch.
+END:VEVENT
+END:VCALENDAR

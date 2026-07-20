@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gopika and Siva Wedding//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:haldi-pellikoduku-20261231@gopika-siva
+DTSTAMP:20260720T000000Z
+DTSTART;TZID=Asia/Kolkata:20261231T070000
+DTEND;TZID=Asia/Kolkata:20261231T130000
+SUMMARY:Gopika & Siva — Haldi & Pellikoduku
+LOCATION:The Park Hyderabad, Hyderabad, Telangana, India
+DESCRIPTION:Haldi and Pellikoduku festivities. Dress code: Yellow. Breakfast and lunch will be served.
+END:VEVENT
+END:VCALENDAR
