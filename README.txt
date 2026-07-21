@@ -23,3 +23,12 @@ const LINKS = {
 };
 
 Keep the calendar folder beside index.html for the Add to calendar buttons.
+
+
+CORRECTED BUILD
+- Hero and footer now load the exact uploaded transparent gold emblem:
+  assets/gs-ganesha-emblem-v12-corrected.png
+- The ampersand spacing was corrected so it no longer touches “Gopika”.
+- A new emblem filename is used to prevent browser caching of the old image.
+
+Open the complete extracted folder, not an older standalone index.html.
