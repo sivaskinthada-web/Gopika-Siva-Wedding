@@ -3,32 +3,17 @@ Gopika & Siva Wedding Website — Version 1.2 Guest Memories Edition
 1. Extract the ZIP completely.
 2. Open index.html.
 
-Version 1.2 adds:
-- Share Your Memories upload interface (UI placeholder only)
-- Placeholder success message
-- Wedding Memories album section
-- Download Invitation button
-- QR image placeholder
-- New footer links
+EDITABLE LINKS
 
-The exact G&S Ganesha emblem remains embedded directly in index.html.
-The event photographs, existing CSS, countdown, event cards, animations and JavaScript remain in place.
-
-To connect the future services, open index.html and update:
+Open index.html and find:
 
 const LINKS = {
-  photoUpload: "",
-  invitationPDF: "",
-  album: ""
+  googleForm: "YOUR_GOOGLE_FORM_LINK",
+  invitationPDF: "YOUR_INVITATION_PDF_LINK",
+  weddingAlbum: "YOUR_WEDDING_ALBUM_LINK"
 };
 
-Keep the calendar folder beside index.html for the Add to calendar buttons.
+Replace only the placeholder text inside the quotation marks.
 
-
-CORRECTED BUILD
-- Hero and footer now load the exact uploaded transparent gold emblem:
-  assets/gs-ganesha-emblem-v12-corrected.png
-- The ampersand spacing was corrected so it no longer touches “Gopika”.
-- A new emblem filename is used to prevent browser caching of the old image.
-
-Open the complete extracted folder, not an older standalone index.html.
+The existing hero, countdown, events, maps, calendars, contacts,
+animations, colours and typography remain unchanged.

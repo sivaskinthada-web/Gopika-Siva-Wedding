@@ -8,7 +8,7 @@
   <meta property="og:title" content="Gopika & Siva — Wedding Celebrations">
   <meta property="og:description" content="Two traditions. One celebration. Join us on 26 and 31 December 2026.">
   <meta property="og:type" content="website">
-  <title>Gopika & Siva | Wedding Celebrations — v1.2 final corrected</title>
+  <title>Gopika & Siva | Wedding Celebrations — Version 1.2</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
@@ -405,366 +405,123 @@ footer p { margin:0; font-size:.7rem; letter-spacing:.14em; text-transform:upper
 
 
 
+
 /* Version 1.2 — Guest Memories Edition */
-.memories {
-  padding: 28px 0 120px;
-}
-
-.memories-heading {
-  max-width: 790px;
-  margin: 0 auto 54px;
-  text-align: center;
-}
-
-.memories-heading h2,
-.album-copy h2,
-.qr-copy h2 {
-  margin: 0;
-  color: var(--deep-maroon);
+.memories { padding: 35px 0 120px; }
+.memories-heading { max-width: 790px; margin: 0 auto 48px; text-align: center; }
+.memories-heading h2, .album-copy h2, .qr-copy h2 {
+  margin: 0; color: var(--deep-maroon);
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(3rem, 7vw, 5.7rem);
-  font-weight: 500;
-  line-height: .95;
-  letter-spacing: -.035em;
+  font-weight: 500; line-height: .95; letter-spacing: -.035em;
 }
+.memories-intro { max-width: 740px; margin: 27px auto 0; color: var(--muted); }
+.memories-intro p { margin: 0 0 14px; }
 
-.memories-intro {
-  max-width: 740px;
-  margin: 27px auto 0;
-  color: var(--muted);
-}
-
-.memories-intro p {
-  margin: 0 0 14px;
-}
-
-.memory-form {
-  position: relative;
-  width: min(780px, 100%);
-  margin: 0 auto;
-  padding: clamp(34px, 6vw, 62px);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-}
-
-.memory-form::before,
-.album-panel::before,
-.qr-panel::before {
-  content: "";
-  position: absolute;
-  inset: 13px;
-  border: 1px solid rgba(189, 152, 82, .24);
-  pointer-events: none;
-}
-
-.form-field {
-  position: relative;
-  margin-bottom: 27px;
-}
-
-.form-field label {
-  display: block;
-  margin-bottom: 9px;
-  color: var(--deep-maroon);
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-}
-
-.optional {
-  color: var(--muted);
-  font-size: .65rem;
-  font-weight: 500;
-  letter-spacing: .08em;
-}
-
-.form-field input[type="text"] {
-  width: 100%;
-  min-height: 52px;
-  padding: 12px 15px;
-  color: var(--ink);
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid rgba(106, 33, 53, .28);
-  border-radius: 0;
-  font: inherit;
-  outline: none;
-}
-
-.form-field input[type="text"]:focus {
-  border-bottom-color: var(--gold);
-}
-
-.file-picker {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 16px;
-  padding: 17px;
-  background: var(--ivory);
-  border: 1px solid var(--line);
-}
-
-.file-picker input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.file-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 10px 18px;
-  color: white;
-  background: var(--maroon);
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: .78rem;
-  font-weight: 600;
-}
-
-.file-name {
-  min-width: 0;
-  overflow: hidden;
-  color: var(--muted);
-  font-size: .85rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.memory-form .actions {
-  position: relative;
-  justify-content: center;
-  margin-top: 34px;
-}
-
-.memory-form button {
-  border: 0;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.form-note {
-  position: relative;
-  margin: 18px 0 0;
-  color: var(--muted);
-  font-size: .76rem;
-  text-align: center;
-}
-
-.memory-success {
-  position: relative;
-  display: none;
-  margin-top: 27px;
-  padding: 24px;
-  color: var(--deep-maroon);
-  background: rgba(231, 211, 167, .28);
-  border: 1px solid rgba(189, 152, 82, .4);
-  text-align: center;
-}
-
-.memory-success.visible {
-  display: block;
-}
-
-.memory-success strong {
-  display: block;
-  margin-bottom: 5px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.7rem;
-  font-weight: 600;
-}
-
-.memory-success p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.post-wedding {
-  padding: 0 0 120px;
-}
-
-.album-panel,
-.qr-panel {
-  position: relative;
-  overflow: hidden;
-}
-
-.album-panel {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  min-height: 440px;
-  background: var(--paper);
-  box-shadow: var(--shadow);
-}
-
-.album-copy {
-  position: relative;
-  z-index: 1;
-  padding: clamp(45px, 7vw, 80px);
-}
-
-.album-copy h2,
-.qr-copy h2 {
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
-}
-
-.album-copy > p:last-of-type,
-.qr-copy > p:last-of-type {
-  max-width: 610px;
-  margin: 23px 0 0;
-  color: var(--muted);
-}
-
-.album-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.album-art {
-  position: relative;
-  display: grid;
-  place-items: center;
-  min-height: 360px;
-  color: var(--gold-light);
+.memory-card {
+  position: relative; width: min(850px, 100%); margin: 0 auto;
+  padding: clamp(48px, 7vw, 82px) clamp(28px, 6vw, 70px);
+  color: white; text-align: center;
   background:
-    radial-gradient(circle at center, rgba(231, 211, 167, .12), transparent 47%),
-    var(--deep-maroon);
+    radial-gradient(circle at 50% 120%, rgba(189,152,82,.25), transparent 42%),
+    var(--maroon);
+  box-shadow: var(--shadow);
 }
+.memory-card::before {
+  content: ""; position: absolute; inset: 16px;
+  border: 1px solid rgba(231,211,167,.46); pointer-events: none;
+}
+.memory-card > * { position: relative; }
+.memory-card .eyebrow { color: var(--gold-light); }
+.memory-card h3 {
+  margin: 4px 0 19px; color: white;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  font-weight: 500; line-height: 1;
+}
+.memory-card p { max-width: 610px; margin: 0 auto; color: rgba(255,255,255,.76); }
+.memory-card .actions { justify-content: center; margin-top: 31px; }
 
+.post-wedding { padding: 0 0 120px; }
+.album-panel, .qr-panel { position: relative; overflow: hidden; }
+.album-panel {
+  display: grid; grid-template-columns: 1.15fr .85fr;
+  min-height: 430px; background: var(--paper); box-shadow: var(--shadow);
+}
+.album-panel::before, .qr-panel::before {
+  content: ""; position: absolute; inset: 13px;
+  border: 1px solid rgba(189,152,82,.24); pointer-events: none;
+}
+.album-copy { position: relative; z-index: 1; padding: clamp(45px, 7vw, 80px); }
+.album-copy h2, .qr-copy h2 { font-size: clamp(2.8rem, 6vw, 4.8rem); }
+.album-copy > p:last-of-type, .qr-copy > p:last-of-type {
+  max-width: 620px; margin: 23px 0 0; color: var(--muted);
+}
+.album-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.album-art {
+  position: relative; display: grid; place-items: center; min-height: 350px;
+  color: var(--gold-light);
+  background: radial-gradient(circle at center, rgba(231,211,167,.12), transparent 47%), var(--deep-maroon);
+}
 .album-art::before {
-  content: "";
-  position: absolute;
-  inset: 22px;
-  border: 1px solid rgba(231, 211, 167, .38);
+  content: ""; position: absolute; inset: 22px;
+  border: 1px solid rgba(231,211,167,.38);
 }
-
 .album-monogram {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(5rem, 12vw, 8rem);
-  font-style: italic;
-  line-height: 1;
+  font-size: clamp(5rem, 12vw, 8rem); font-style: italic; line-height: 1;
 }
 
 .qr-panel {
-  display: grid;
-  grid-template-columns: .72fr 1.28fr;
-  align-items: center;
-  margin-top: 34px;
-  padding: clamp(36px, 6vw, 65px);
-  background: #f1ecdf;
-  border: 1px solid var(--line);
+  display: grid; grid-template-columns: .72fr 1.28fr; align-items: center;
+  margin-top: 34px; padding: clamp(36px, 6vw, 65px);
+  background: #f1ecdf; border: 1px solid var(--line);
 }
-
 .qr-placeholder {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  width: min(230px, 100%);
-  aspect-ratio: 1;
-  margin: auto;
-  color: var(--gold);
-  background: var(--paper);
-  border: 1px solid rgba(106, 33, 53, .2);
-  box-shadow: 0 14px 35px rgba(71, 19, 34, .07);
-  text-align: center;
+  position: relative; z-index: 1; display: grid; place-items: center;
+  width: min(230px, 100%); aspect-ratio: 1; margin: auto;
+  color: var(--gold); background: var(--paper);
+  border: 1px solid rgba(106,33,53,.2);
+  box-shadow: 0 14px 35px rgba(71,19,34,.07); text-align: center;
 }
-
-.qr-placeholder::before,
-.qr-placeholder::after {
-  content: "";
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  border-color: var(--gold);
-  border-style: solid;
+.qr-placeholder::before, .qr-placeholder::after {
+  content: ""; position: absolute; width: 32px; height: 32px;
+  border-color: var(--gold); border-style: solid;
 }
-
-.qr-placeholder::before {
-  top: 18px;
-  left: 18px;
-  border-width: 1px 0 0 1px;
-}
-
-.qr-placeholder::after {
-  right: 18px;
-  bottom: 18px;
-  border-width: 0 1px 1px 0;
-}
-
+.qr-placeholder::before { top: 18px; left: 18px; border-width: 1px 0 0 1px; }
+.qr-placeholder::after { right: 18px; bottom: 18px; border-width: 0 1px 1px 0; }
 .qr-placeholder span {
-  max-width: 135px;
-  font-size: .68rem;
-  font-weight: 600;
-  letter-spacing: .15em;
-  line-height: 1.6;
-  text-transform: uppercase;
+  max-width: 140px; font-size: .68rem; font-weight: 600;
+  letter-spacing: .15em; line-height: 1.6; text-transform: uppercase;
 }
-
-.qr-copy {
-  position: relative;
-  z-index: 1;
-  padding-left: clamp(25px, 5vw, 70px);
-}
+.qr-copy { position: relative; z-index: 1; padding-left: clamp(25px, 5vw, 70px); }
 
 .footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 24px;
-  margin: 4px 0;
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 10px 24px; margin: 4px 0;
 }
-
 footer .footer-links a {
-  display: inline;
-  width: auto;
-  height: auto;
-  color: #e5d7bd;
-  border: 0;
-  border-radius: 0;
-  font-size: .68rem;
-  letter-spacing: .12em;
-  text-decoration: none;
-  text-transform: uppercase;
-  opacity: .78;
+  display: inline; width: auto; height: auto; color: #e5d7bd;
+  border: 0; border-radius: 0; font-size: .68rem;
+  letter-spacing: .12em; text-decoration: none; text-transform: uppercase; opacity: .78;
 }
-
-footer .footer-links a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-.placeholder-link[aria-disabled="true"] {
-  cursor: default;
-}
+footer .footer-links a:hover { opacity: 1; text-decoration: underline; }
+.placeholder-link[aria-disabled="true"] { cursor: default; opacity: .72; }
 
 @media (max-width: 780px) {
   .memories { padding-bottom: 90px; }
-  .memory-form { padding: 38px 23px; }
-  .file-picker { grid-template-columns: 1fr; }
-  .file-button { width: 100%; }
-  .file-name { text-align: center; }
-  .album-panel,
-  .qr-panel { grid-template-columns: 1fr; }
+  .memory-card { padding: 58px 25px; }
+  .album-panel, .qr-panel { grid-template-columns: 1fr; }
   .album-art { min-height: 290px; }
   .qr-placeholder { width: 190px; }
   .qr-copy { padding: 34px 0 0; text-align: center; }
   .qr-copy > p:last-of-type { margin-left: auto; margin-right: auto; }
   .album-actions { flex-direction: column; }
   .album-actions .primary-button,
-  .album-actions .secondary-button { width: 100%; }
+  .album-actions .secondary-button,
+  .memory-card .primary-button { width: 100%; }
   .footer-links { gap: 10px 16px; }
 }
-
 
 
 /* Version 1.2 correction — emblem cache and ampersand spacing */
@@ -1015,43 +772,28 @@ footer .footer-links a:hover {
         </div>
       </div>
 
-      <form id="memoryForm" class="memory-form reveal" novalidate>
-        <div class="form-field">
-          <label for="guestName">Your Name <span class="optional">(optional)</span></label>
-          <input id="guestName" name="guestName" type="text" autocomplete="name" placeholder="Your name">
-        </div>
-
-        <div class="form-field">
-          <label for="memoryFiles">Photo / Video Upload</label>
-          <div class="file-picker">
-            <label class="file-button" for="memoryFiles">Upload Photo or Video</label>
-            <input id="memoryFiles" name="memoryFiles" type="file" accept="image/*,video/*" multiple>
-            <span id="fileName" class="file-name">No files selected</span>
-          </div>
-        </div>
-
+      <div class="memory-card reveal">
+        <p class="eyebrow">Captured with love</p>
+        <h3>A moment through your eyes</h3>
+        <p>Share your photographs and videos with us through our Google Form.</p>
         <div class="actions">
-          <button class="primary-button" type="submit">Submit Memories</button>
+          <a class="primary-button gold-button placeholder-link"
+             href="#" data-link="googleForm" aria-disabled="true">Share Your Memories ❤️</a>
         </div>
-
-        <p class="form-note">The upload connection will be added before the celebrations.</p>
-
-        <div id="memorySuccess" class="memory-success" role="status" aria-live="polite">
-          <strong>Thank you for sharing your memories with us.</strong>
-          <p>We can't wait to relive these beautiful moments through your photographs and videos.</p>
-        </div>
-      </form>
+      </div>
     </section>
 
     <section class="post-wedding section">
       <div class="album-panel reveal">
         <div class="album-copy">
           <p class="eyebrow">A collection to come</p>
-          <h2>Wedding Memories</h2>
-          <p>Soon after our celebrations, this page will become a collection of beautiful moments shared by our family and friends.</p>
+          <h2>Wedding Album</h2>
+          <p>Soon after our celebrations, this page will become a collection of beautiful memories shared by our family and friends.</p>
           <div class="album-actions">
-            <a class="primary-button placeholder-link" href="#" data-link="album" aria-disabled="true">View Wedding Album</a>
-            <a class="secondary-button placeholder-link" href="#" data-link="invitationPDF" aria-disabled="true">Download Invitation</a>
+            <a class="primary-button placeholder-link"
+               href="#" data-link="weddingAlbum" aria-disabled="true">View Wedding Album</a>
+            <a class="secondary-button placeholder-link"
+               href="#" data-link="invitationPDF" aria-disabled="true">Download Invitation</a>
           </div>
         </div>
         <div class="album-art" aria-hidden="true">
@@ -1065,8 +807,8 @@ footer .footer-links a:hover {
         </div>
         <div class="qr-copy">
           <p class="eyebrow">One place for every detail</p>
-          <h2>Keep the celebration close</h2>
-          <p>Scan the QR code on your invitation to access wedding details, calendars, directions, and to share your memories with us after the celebrations.</p>
+          <h2>Scan and stay connected</h2>
+          <p>Scan the QR code on your invitation to access wedding details, directions, calendars, download the invitation and share your memories with us.</p>
         </div>
       </div>
     </section>
@@ -1078,7 +820,7 @@ footer .footer-links a:hover {
     
     <nav class="footer-links" aria-label="Footer">
       <a class="placeholder-link" href="#" data-link="invitationPDF" aria-disabled="true">Download Invitation</a>
-      <a class="placeholder-link" href="#" data-link="album" aria-disabled="true">Wedding Album</a>
+      <a class="placeholder-link" href="#" data-link="weddingAlbum" aria-disabled="true">Wedding Album</a>
       <a href="#share-memories">Share Memories</a>
       <a href="#contact">Contact Us</a>
     </nav>
@@ -1090,51 +832,26 @@ footer .footer-links a:hover {
   <script>
 
 const LINKS = {
-  photoUpload: "",
-  invitationPDF: "",
-  album: ""
+  googleForm: "YOUR_GOOGLE_FORM_LINK",
+  invitationPDF: "YOUR_INVITATION_PDF_LINK",
+  weddingAlbum: "YOUR_WEDDING_ALBUM_LINK"
 };
 
-const memoryForm = document.getElementById("memoryForm");
-const memoryFiles = document.getElementById("memoryFiles");
-const fileName = document.getElementById("fileName");
-const memorySuccess = document.getElementById("memorySuccess");
-
-if (memoryFiles && fileName) {
-  memoryFiles.addEventListener("change", () => {
-    const count = memoryFiles.files.length;
-    if (count === 0) {
-      fileName.textContent = "No files selected";
-    } else if (count === 1) {
-      fileName.textContent = memoryFiles.files[0].name;
-    } else {
-      fileName.textContent = `${count} files selected`;
-    }
-  });
-}
-
-if (memoryForm && memorySuccess) {
-  memoryForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    if (LINKS.photoUpload) {
-      window.open(LINKS.photoUpload, "_blank", "noopener,noreferrer");
-    }
-
-    memorySuccess.classList.add("visible");
-    memorySuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
-  });
+function isConfiguredLink(value) {
+  return Boolean(value) && !value.startsWith("YOUR_");
 }
 
 document.querySelectorAll("[data-link]").forEach((link) => {
   const target = LINKS[link.dataset.link];
 
-  if (target) {
+  if (isConfiguredLink(target)) {
     link.href = target;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.removeAttribute("aria-disabled");
   } else {
+    link.href = "#";
+    link.setAttribute("aria-disabled", "true");
     link.addEventListener("click", (event) => event.preventDefault());
   }
 });
