@@ -9,7 +9,7 @@
 <meta content="Gopika &amp; Siva — Wedding Celebrations" property="og:title"/>
 <meta content="Two traditions. One celebration. Join us on 26 and 31 December 2026." property="og:description"/>
 <meta content="website" property="og:type"/>
-<title>Gopika &amp; Siva | Wedding Celebrations — Version 2.3</title>
+<title>Gopika &amp; Siva | Wedding Celebrations — Version 2.4</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -920,6 +920,101 @@ body.hero-ready .hero .primary-button {
   }
 }
 
+
+/* Version 2.4 — native website sharing */
+.share-site-panel {
+  position: relative;
+  margin-top: 34px;
+  padding: clamp(56px, 8vw, 90px) clamp(28px, 7vw, 86px);
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 125%, rgba(189,152,82,.28), transparent 42%),
+    var(--deep-maroon);
+  box-shadow: var(--shadow);
+}
+
+.share-site-panel::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(231,211,167,.42);
+  pointer-events: none;
+}
+
+.share-site-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.share-site-copy .eyebrow {
+  color: var(--gold-light);
+}
+
+.share-site-copy h2 {
+  margin: 0;
+  color: white;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  font-weight: 500;
+  line-height: .95;
+  letter-spacing: -.035em;
+}
+
+.share-site-copy > p:not(.eyebrow):not(.share-site-status) {
+  max-width: 650px;
+  margin: 24px auto 0;
+  color: rgba(255,255,255,.76);
+}
+
+.share-site-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 12px;
+  margin: 30px auto 34px;
+}
+
+.share-site-features span {
+  padding: 8px 13px;
+  border: 1px solid rgba(231,211,167,.28);
+  border-radius: 999px;
+  color: rgba(255,255,255,.82);
+  font-size: .72rem;
+  letter-spacing: .06em;
+}
+
+.share-site-panel .primary-button {
+  border: 0;
+  cursor: pointer;
+  background: var(--gold-light);
+  color: var(--deep-maroon);
+}
+
+.share-site-status {
+  min-height: 1.5em;
+  margin: 14px 0 0;
+  color: var(--gold-light);
+  font-size: .78rem;
+}
+
+@media (max-width: 780px) {
+  .share-site-panel {
+    padding: 62px 25px;
+  }
+
+  .share-site-panel .primary-button {
+    width: 100%;
+  }
+
+  .share-site-features {
+    gap: 8px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1137,15 +1232,7 @@ body.hero-ready .hero .primary-button {
 <span class="album-monogram">G <i>&amp;</i> S</span>
 </div>
 </div>
-<div class="qr-panel reveal">
-<div aria-label="QR code placeholder" class="qr-placeholder">
-<span>QR image will be placed here</span>
-</div>
-<div class="qr-copy">
-<p class="eyebrow">Your invitation, always close</p>
-<h2>One scan. Every detail.</h2>
-<p>Scan the QR code on your chocolate invitation to open our wedding website.</p><p>Here you can find the wedding schedule, venue details, maps, contact information and calendar links in one place.</p></div>
-</div>
+<div class="share-site-panel reveal"><div class="share-site-copy"><p class="eyebrow">Pass the invitation along</p><h2>Share this website</h2><p>Send our wedding website to family and friends so they can easily find the celebration schedule, venue maps, calendar links and contact details.</p><div class="share-site-features"><span>Wedding schedule</span><span>Venue maps</span><span>Calendar reminders</span><span>Contact information</span><span>Wedding memories</span></div><button class="primary-button" id="shareWebsiteButton" type="button">Share this Website</button><p aria-live="polite" class="share-site-status" id="shareWebsiteStatus"></p></div></div>
 </section>
 </main>
 <footer>
@@ -1238,6 +1325,47 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".reveal:not(.visible)").forEach((element) => observer.observe(element));
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+
+const shareWebsiteButton = document.getElementById("shareWebsiteButton");
+const shareWebsiteStatus = document.getElementById("shareWebsiteStatus");
+
+if (shareWebsiteButton) {
+  shareWebsiteButton.addEventListener("click", async () => {
+    const shareData = {
+      title: document.title,
+      text: "Gopika & Siva — Wedding Celebrations",
+      url: window.location.href
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        if (shareWebsiteStatus) shareWebsiteStatus.textContent = "";
+        return;
+      }
+
+      await navigator.clipboard.writeText(window.location.href);
+      if (shareWebsiteStatus) {
+        shareWebsiteStatus.textContent = "Website link copied to your clipboard.";
+      }
+    } catch (error) {
+      if (error && error.name === "AbortError") return;
+
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        if (shareWebsiteStatus) {
+          shareWebsiteStatus.textContent = "Website link copied to your clipboard.";
+        }
+      } catch {
+        if (shareWebsiteStatus) {
+          shareWebsiteStatus.textContent =
+            "Please copy the website address from your browser.";
+        }
+      }
+    }
+  });
+}
 
 </script>
 </body>
