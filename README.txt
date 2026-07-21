@@ -17,3 +17,18 @@ Replace only the placeholder text inside the quotation marks.
 
 The existing hero, countdown, events, maps, calendars, contacts,
 animations, colours and typography remain unchanged.
+
+
+VERSION 1.3 — PREMIUM POLISH EDITION
+
+Added:
+- Gentle hero entrance sequence
+- Subtle countdown entrance animation
+- Warmer QR wording
+- Elegant camera illustration in Share Your Memories
+- Wedding Album renamed to Wedding Memories
+- Subtle footer thank-you line
+- Refined button spacing and hover behaviour
+
+The layout, colours, typography, hero design, event cards, maps,
+calendars, contacts and existing functionality remain unchanged.
