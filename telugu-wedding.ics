@@ -2,13 +2,14 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Gopika and Siva Wedding//EN
 CALSCALE:GREGORIAN
+METHOD:PUBLISH
 BEGIN:VEVENT
-UID:telugu-wedding-20261231@gopika-siva
-DTSTAMP:20260720T000000Z
+UID:telugu-wedding-20261231@gopikaandsiva
+DTSTAMP:20260721T120000Z
 DTSTART;TZID=Asia/Kolkata:20261231T170000
 DTEND;TZID=Asia/Kolkata:20261231T220000
-SUMMARY:Gopika & Siva — Traditional Telugu Wedding
-LOCATION:Marigold Hotel, Hyderabad, Telangana, India
-DESCRIPTION:Traditional Telugu wedding ceremony followed by vegetarian dinner.
+SUMMARY:Traditional Telugu Wedding — Gopika & Siva
+LOCATION:Marigold Hotel, Hyderabad
+DESCRIPTION:Traditional Telugu wedding followed by vegetarian dinner.
 END:VEVENT
 END:VCALENDAR
