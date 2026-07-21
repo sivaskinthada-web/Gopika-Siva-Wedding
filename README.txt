@@ -1,34 +1,33 @@
-Gopika & Siva Wedding Website — Version 1.2 Guest Memories Edition
+Gopika & Siva Wedding Website — Version 1.4 Clean QR Strategy
 
-1. Extract the ZIP completely.
-2. Open index.html.
+QR CODE 1 — WEDDING INVITATION
+The QR code printed on the invitation should point only to the published
+wedding website homepage.
 
-EDITABLE LINKS
+QR CODE 2 — WEDDING VENUE
+The separate QR code displayed at the venue should point directly to the
+Google Form used for guest photo and video uploads. This Google Form is not
+linked from the website.
 
-Open index.html and find:
+WEBSITE CONTENT
+- Wedding information
+- Countdown
+- Event schedule
+- Venue details and maps
+- Calendar downloads
+- Contact information
+- Future Wedding Memories album
+
+WEDDING MEMORIES LINK
+Open index.html and find this object near the beginning of the JavaScript:
 
 const LINKS = {
-  googleForm: "YOUR_GOOGLE_FORM_LINK",
-  invitationPDF: "YOUR_INVITATION_PDF_LINK",
   weddingAlbum: "YOUR_WEDDING_ALBUM_LINK"
 };
 
-Replace only the placeholder text inside the quotation marks.
+After the wedding, replace YOUR_WEDDING_ALBUM_LINK with the shared Google
+Photos or Google Drive album URL. Until then, the button remains visible but
+disabled.
 
-The existing hero, countdown, events, maps, calendars, contacts,
-animations, colours and typography remain unchanged.
-
-
-VERSION 1.3 — PREMIUM POLISH EDITION
-
-Added:
-- Gentle hero entrance sequence
-- Subtle countdown entrance animation
-- Warmer QR wording
-- Elegant camera illustration in Share Your Memories
-- Wedding Album renamed to Wedding Memories
-- Subtle footer thank-you line
-- Refined button spacing and hover behaviour
-
-The layout, colours, typography, hero design, event cards, maps,
-calendars, contacts and existing functionality remain unchanged.
+The website design, hero, colours, typography, events, maps, contacts,
+calendar files and animations remain unchanged.
