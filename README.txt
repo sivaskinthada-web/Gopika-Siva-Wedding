@@ -1,3 +1,14 @@
+Gopika & Siva Wedding Website — Version 3.0.2 Trial
+
+TRIAL CHANGE
+- Added the supplied engagement photograph to the homepage in a premium framed portrait layout.
+- Updated the invitation sentence to:
+  “We request the pleasure of your company as we celebrate two traditions, two families,
+  and the beginning of a lifetime together.”
+- All Version 3.0.1 event-image updates and website functions remain unchanged.
+
+This is intentionally a trial version so it can be compared with Version 3.0.1.
+
 Gopika & Siva Wedding Website — Wedding Edition 3.0.1
 
 CHANGES FROM 3.0
