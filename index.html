@@ -6,10 +6,10 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#651f32" name="theme-color"/>
 <meta content="Join Gopika and Siva for their Kerala and Telugu wedding celebrations in Kannur and Hyderabad on 26 and 31 December 2026." name="description"/>
-<meta content="Gopika &amp; Siva — Wedding Celebrations" property="og:title"/>
-<meta content="Two traditions. One celebration. Join us on 26 and 31 December 2026." property="og:description"/>
-<meta content="website" property="og:type"/>
-<title>Gopika &amp; Siva | Wedding Celebrations — Version 2.6</title>
+
+
+
+<title>Gopika &amp; Siva | Wedding Celebrations</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -1015,9 +1015,37 @@ body.hero-ready .hero .primary-button {
   }
 }
 
+
+/* Wedding Edition 3.0 — production polish */
+.wedding-welcome {
+  position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center;
+  color: #e7d3a7; background: #471322;
+  transition: opacity .65s ease, visibility .65s ease;
+}
+.wedding-welcome.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.wedding-welcome-inner { text-align: center; animation: welcomeIn .9s ease both; }
+.wedding-welcome img { width: 118px; height: 118px; object-fit: contain; filter: drop-shadow(0 10px 24px rgba(0,0,0,.2)); }
+.wedding-welcome p {
+  margin: 18px 0 2px; font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.4rem, 8vw, 4rem); line-height: 1; color: white;
+}
+.wedding-welcome span { font-size: .7rem; letter-spacing: .24em; text-transform: uppercase; }
+@keyframes welcomeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.contact-groups { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.contact-email-card { grid-column: 1 / -1; }
+.contact-email-card .contact-person { justify-content: center; gap: 28px; }
+footer > a[aria-label="Back to top"] { color: var(--gold-light); font-size: 1rem; }
+@media (max-width:780px) {
+  .contact-email-card { grid-column: auto; }
+  .contact-email-card .contact-person { justify-content: flex-start; gap: 3px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wedding-welcome-inner { animation: none; }
+  .wedding-welcome { transition: none; }
+}
 </style>
-</head>
-<body>
+<meta content="Gopika &amp; Siva — Wedding Celebrations" property="og:title"/><meta content="Join us for our Kerala and Telugu wedding celebrations on 26 and 31 December 2026." property="og:description"/><meta content="website" property="og:type"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/" property="og:url"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/social-preview.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="Gopika &amp; Siva — Wedding Celebrations" name="twitter:title"/><meta content="Two traditions. One celebration. 26 &amp; 31 December 2026." name="twitter:description"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/social-preview.jpg" name="twitter:image"/><link href="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/" rel="canonical"/><link href="favicon.ico" rel="icon"/><link href="favicon-32.png" rel="icon" sizes="32x32"/><link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/></head>
+<body><div aria-hidden="true" class="wedding-welcome" id="weddingWelcome"><div class="wedding-welcome-inner"><img alt="" src="Logo_GS.png"/><p>Gopika &amp; Siva</p><span>Wedding Celebrations</span></div></div>
 <a class="skip-link" href="#events">Skip to event details</a>
 <header class="hero" id="top">
 <div aria-hidden="true" class="hero-leaf hero-leaf-left"></div>
@@ -1179,18 +1207,18 @@ body.hero-ready .hero .primary-button {
 <p class="contact-intro">For any questions about the celebrations, travel or venue details, please contact our family.</p>
 <div class="contact-groups">
 <article class="contact-card">
-<p class="contact-label">Kerala Wedding</p>
+<p class="contact-label">Bride’s Family — Kerala Wedding</p>
+<div class="contact-person">
+<strong>Sreeshan L. S.</strong>
+<a href="tel:+919447082270">+91 94470 82270</a>
+</div>
 <div class="contact-person">
 <strong>Gokul Sreeshan</strong>
 <a href="tel:+918281920708">+91 82819 20708</a>
 </div>
-<div class="contact-person">
-<strong>Sreeshan L.</strong>
-<a href="tel:+919447082270">+91 94470 82270</a>
-</div>
 </article>
 <article class="contact-card">
-<p class="contact-label">Hyderabad Wedding</p>
+<p class="contact-label">Groom’s Family — Hyderabad Wedding</p>
 <div class="contact-person">
 <strong>K. K. Viswanadham</strong>
 <a href="tel:+919392623481">+91 93926 23481</a>
@@ -1200,7 +1228,7 @@ body.hero-ready .hero .primary-button {
 <a href="tel:+916303070066">+91 63030 70066</a>
 </div>
 </article>
-</div>
+<article class="contact-card contact-email-card"><p class="contact-label">Email</p><div class="contact-person"><strong>Gopika &amp; Siva</strong><a href="mailto:sivaskinthada@gmail.com">sivaskinthada@gmail.com</a></div></article></div>
 </section>
 <section class="memories section" id="share-memories">
 <div class="memories-heading reveal">
@@ -1212,7 +1240,7 @@ body.hero-ready .hero .primary-button {
 <p class="eyebrow">Captured with love</p>
 <div aria-hidden="true" class="memory-camera"><span></span></div>
 <h3>A moment through your eyes</h3>
-<p>Share your favourite photos and videos through our Google Form. You may also leave your name and a short message for us.</p>
+<p>Our guest upload page will be connected shortly. Once it is ready, you can share your favourite photos and videos from the celebrations here.</p>
 <div class="actions">
 <a aria-disabled="true" class="primary-button gold-button placeholder-link" data-link="googleForm" href="#">Share Wedding Memories ❤️</a>
 </div>
@@ -1242,9 +1270,9 @@ body.hero-ready .hero .primary-button {
 <a href="#share-memories">Share Wedding Memories</a>
 <a href="#contact">Contact Us</a>
 </nav>
-<a aria-label="Back to top" href="#top">↑</a>
-<p>Thank you for being part of our story.</p>
-<p class="footer-thanks">Thank you for celebrating with us.</p>
+<a aria-label="Back to top" href="#top" title="Back to top">✦</a>
+<p>Made with love for our family and friends.</p>
+<p class="footer-thanks">Every love story is beautiful. Ours is just beginning.</p>
 <p class="footer-dates">26 &amp; 31 December 2026 · Kannur &amp; Hyderabad</p>
 </footer>
 <script>
@@ -1367,6 +1395,14 @@ if (shareWebsiteButton) {
   });
 }
 
+
+window.addEventListener("load", () => {
+  const welcome = document.getElementById("weddingWelcome");
+  if (!welcome) return;
+  const delay = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 150 : 1450;
+  window.setTimeout(() => welcome.classList.add("is-hidden"), delay);
+  window.setTimeout(() => welcome.remove(), delay + 800);
+});
 </script>
 </body>
 </html>
