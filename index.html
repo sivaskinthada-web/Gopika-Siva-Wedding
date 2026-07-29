@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#651f32" name="theme-color"/>
 <meta content="Join Gopika and Siva for their Kerala and Telugu wedding celebrations in Kannur and Hyderabad on 26 and 31 December 2026." name="description"/>
-<title>Gopika &amp; Siva | Wedding Celebrations — 3.0.3</title>
+<title>Gopika &amp; Siva | Wedding Celebrations — 3.0.4</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -1182,6 +1182,54 @@ footer > a[aria-label="Back to top"] { color: var(--gold-light); font-size: 1rem
     padding: 22px 19px;
   }
 }
+
+/* Wedding Edition 3.0.4 — two-card contact layout */
+.contact-groups {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  align-items: stretch;
+}
+
+.contact-card {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 780px) {
+  .contact-groups {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px;
+    width: 100%;
+    max-width: 520px;
+    margin: 30px auto 0;
+  }
+
+  .contact-card {
+    grid-column: 1 / -1 !important;
+    width: 100%;
+    padding: 24px 22px;
+  }
+
+  .contact-person {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    padding: 16px 0;
+  }
+
+  .contact-person strong {
+    font-size: clamp(1.45rem, 7vw, 1.8rem);
+    line-height: 1.08;
+    word-break: normal;
+  }
+
+  .contact-person a {
+    max-width: 100%;
+    font-size: clamp(.91rem, 4vw, 1rem);
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+}
 </style>
 <meta content="Gopika &amp; Siva — Wedding Celebrations" property="og:title"/><meta content="Join us for our Kerala and Telugu wedding celebrations on 26 and 31 December 2026." property="og:description"/><meta content="website" property="og:type"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/" property="og:url"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/social-preview.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="Gopika &amp; Siva — Wedding Celebrations" name="twitter:title"/><meta content="Two traditions. One celebration. 26 &amp; 31 December 2026." name="twitter:description"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/social-preview.jpg" name="twitter:image"/><link href="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/" rel="canonical"/><link href="favicon.ico" rel="icon"/><link href="favicon-32.png" rel="icon" sizes="32x32"/><link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/></head>
 <body><div aria-hidden="true" class="wedding-welcome" id="weddingWelcome"><div class="wedding-welcome-inner"><img alt="" src="Logo_GS.png"/><p>Gopika &amp; Siva</p><span>Wedding Celebrations</span></div></div>
@@ -1367,7 +1415,7 @@ footer > a[aria-label="Back to top"] { color: var(--gold-light); font-size: 1rem
 <a href="tel:+916303070066">+91 63030 70066</a>
 </div>
 </article>
-<article class="contact-card contact-email-card"><p class="contact-label">Email</p><div class="contact-person"><strong>Gopika &amp; Siva</strong><a href="mailto:sivaskinthada@gmail.com">sivaskinthada@gmail.com</a></div></article></div>
+</div>
 </section>
 <section class="memories section" id="share-memories">
 <div class="memories-heading reveal">

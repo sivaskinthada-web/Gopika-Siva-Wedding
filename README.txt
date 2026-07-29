@@ -1,3 +1,14 @@
+Gopika & Siva Wedding Website — Version 3.0.4
+
+CONTACT SECTION CLEANUP
+- Removed the email contact card.
+- Contact section now contains only two cards:
+  1. Bride's Family — Kerala Wedding
+  2. Groom's Family — Hyderabad Wedding
+- On mobile, the cards stack vertically in that order.
+- On desktop, the two cards remain side by side.
+- All previous image, invitation-line, engagement-photo and mobile fixes remain included.
+
 Gopika & Siva Wedding Website — Version 3.0.3
 
 MOBILE CONTACT FIX
