@@ -1,3 +1,13 @@
+Gopika & Siva Wedding Website — Version 3.0.3
+
+MOBILE CONTACT FIX
+- Contact cards now display in one clean column on phones.
+- Bride's family, groom's family and email each use the full available width.
+- Long names no longer break awkwardly because of narrow two-column cards.
+- Phone numbers and email addresses wrap safely on smaller screens.
+- Desktop and tablet layouts remain unchanged.
+- Includes all Version 3.0.2 trial content and event-image updates.
+
 Gopika & Siva Wedding Website — Version 3.0.2 Trial
 
 TRIAL CHANGE

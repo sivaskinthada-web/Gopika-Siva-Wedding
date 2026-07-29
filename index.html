@@ -6,7 +6,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#651f32" name="theme-color"/>
 <meta content="Join Gopika and Siva for their Kerala and Telugu wedding celebrations in Kannur and Hyderabad on 26 and 31 December 2026." name="description"/>
-<title>Gopika &amp; Siva | Wedding Celebrations — 3.0.2 Trial</title>
+<title>Gopika &amp; Siva | Wedding Celebrations — 3.0.3</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -1116,6 +1116,70 @@ footer > a[aria-label="Back to top"] { color: var(--gold-light); font-size: 1rem
   @keyframes engagementReveal {
     from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Wedding Edition 3.0.3 — mobile contact polish */
+@media (max-width: 780px) {
+  .contact-groups {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px;
+    width: 100%;
+    max-width: 520px;
+    margin-top: 30px;
+  }
+
+  .contact-card,
+  .contact-email-card {
+    grid-column: 1 / -1 !important;
+    width: 100%;
+    min-width: 0;
+    padding: 24px 22px;
+    box-sizing: border-box;
+  }
+
+  .contact-label {
+    margin-bottom: 16px;
+    font-size: .68rem;
+    line-height: 1.65;
+    letter-spacing: .15em;
+  }
+
+  .contact-person,
+  .contact-email-card .contact-person {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+    padding: 16px 0;
+    min-width: 0;
+  }
+
+  .contact-person strong {
+    font-size: clamp(1.45rem, 7vw, 1.8rem);
+    line-height: 1.08;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .contact-person a {
+    max-width: 100%;
+    font-size: clamp(.91rem, 4vw, 1rem);
+    line-height: 1.45;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-section .section-heading,
+  #contact .section-heading {
+    font-size: clamp(2.5rem, 13vw, 3.7rem);
+  }
+
+  .contact-card,
+  .contact-email-card {
+    padding: 22px 19px;
   }
 }
 </style>
