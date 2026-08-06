@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gopika and Siva Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:celebration-evening-20261225@gopikaandsiva
+DTSTAMP:20260806T120000Z
+DTSTART;TZID=Asia/Kolkata:20261225T160000
+DTEND;TZID=Asia/Kolkata:20261225T210000
+SUMMARY:Celebration Evening — Gopika & Siva
+LOCATION:Bride's House, Kerala
+DESCRIPTION:An evening of games, music, dancing and togetherness as our families and friends come together to begin the celebrations.
+END:VEVENT
+END:VCALENDAR
