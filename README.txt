@@ -1,27 +1,16 @@
-Gopika & Siva Wedding Website — Wedding Edition 3.1
+Gopika & Siva Wedding Website — Version 3.2
 
-MAIN UPDATE
-- Events are now clearly grouped into Kerala Celebrations and Hyderabad Celebrations.
-- Added Celebration Evening:
-  25 December 2026, 4:00 PM, Bride's House.
-- Kerala section:
-  1. Celebration Evening
-  2. Kerala Wedding Ceremony
-- Hyderabad section:
-  1. Thread Ceremony
-  2. Haldi Ceremony
-  3. Traditional Telugu Wedding
-- Added an elegant transition between Kerala and Hyderabad.
-- Countdown now points to the first event on 25 December at 4:00 PM.
-- Added a calendar file for Celebration Evening.
-- All previous branding, event images, engagement photo, contact cleanup,
-  social preview, sharing, maps, countdown, animations and mobile fixes remain.
+WEDUPLOADER INTEGRATION
+- Share Wedding Memories opens the live WedUploader guest upload page.
+- View Guest Gallery opens the same WedUploader page, where the public gallery appears below the upload area.
 
-IMPORTANT
-The Bride's House address was not provided, so no directions button was added
-for the Celebration Evening. The calendar entry identifies the venue as
-Bride's House, Kerala.
+TELUGU WEDDING NUMBER FIX
+- The old '04' was embedded inside the Telugu Wedding source photograph itself.
+- A corrected wedding image is included with that baked-in number removed.
+- The website overlay displays only event number 05.
 
-UPLOAD
-Upload every file and the complete calendar folder to the root of the
-Gopika-Siva-Wedding GitHub repository.
+UPLOAD TO GITHUB
+1. Extract this ZIP.
+2. Upload ALL files from inside this folder to the root of the GitHub repository.
+3. Upload the complete calendar folder as well.
+4. Replace existing files when GitHub asks.
