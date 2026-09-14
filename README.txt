@@ -1,3 +1,14 @@
+Gopika & Siva Wedding Website — Wedding Edition 4.2
+
+REFERENCE-INSPIRED OPENING
+- Tall, dark burgundy invitation envelope inspired by the supplied reference.
+- G&S Ganesha monogram is centered in the wax seal.
+- Text reads "PLEASE CLICK FOR INVITATION".
+- Clicking the seal or envelope unlocks the seal, folds the top flap back,
+  raises an ivory invitation card, then reveals the existing wedding website.
+- No standalone image is used for the animation; the effect is HTML/CSS/JS.
+- Existing website content, links, Muhurtham 7:05 PM and WedUploader are preserved.
+
 Gopika & Siva Wedding Website — Wedding Edition 4.0
 
 NEW OPENING EXPERIENCE
