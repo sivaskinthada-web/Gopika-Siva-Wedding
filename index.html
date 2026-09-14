@@ -1598,6 +1598,194 @@ html.invitation-locked body { overflow: hidden; }
   }
 }
 
+
+/* Wedding Edition 4.3 — Golden seal awakening */
+.invite-card {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(42%) scale(.93);
+  transition:
+    transform 1.15s cubic-bezier(.18,.78,.22,1),
+    opacity .45s ease .62s,
+    visibility 0s linear .62s,
+    box-shadow 1s ease;
+}
+
+.invite-envelope::before,
+.invite-envelope::after {
+  content: "❦";
+  position: absolute;
+  z-index: 6;
+  top: 22%;
+  color: rgba(210,164,86,.34);
+  font-family: Georgia, serif;
+  font-size: clamp(3.1rem, 12vw, 5.4rem);
+  line-height: 1;
+  text-shadow:
+    0 1px rgba(255,225,158,.12),
+    0 -1px rgba(20,0,7,.65);
+  opacity: .68;
+  pointer-events: none;
+}
+.invite-envelope::before { left: 9%; transform: rotate(-28deg); }
+.invite-envelope::after  { right: 9%; transform: scaleX(-1) rotate(-28deg); }
+
+.golden-awakening {
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  top: 49.5%;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.golden-awakening::before,
+.golden-awakening::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%,-50%) scale(.1);
+  opacity: 0;
+}
+.golden-awakening::before {
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle,
+    rgba(255,252,220,.98) 0 4%,
+    rgba(255,210,103,.95) 12%,
+    rgba(238,151,39,.62) 28%,
+    rgba(193,77,28,.22) 50%,
+    transparent 72%);
+  filter: blur(4px);
+}
+.golden-awakening::after {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(255,190,73,.36), transparent 68%);
+  filter: blur(12px);
+}
+
+.golden-awakening .ray {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 155px;
+  border-radius: 100%;
+  transform-origin: 50% 0;
+  opacity: 0;
+  background: linear-gradient(to bottom,
+    rgba(255,251,213,.95),
+    rgba(255,190,67,.62) 38%,
+    transparent 100%);
+  filter: drop-shadow(0 0 5px rgba(255,190,67,.8));
+}
+.golden-awakening .r1 { transform: rotate(0deg); }
+.golden-awakening .r2 { transform: rotate(45deg); }
+.golden-awakening .r3 { transform: rotate(90deg); }
+.golden-awakening .r4 { transform: rotate(135deg); }
+.golden-awakening .r5 { transform: rotate(180deg); }
+.golden-awakening .r6 { transform: rotate(225deg); }
+.golden-awakening .r7 { transform: rotate(270deg); }
+.golden-awakening .r8 { transform: rotate(315deg); }
+
+.golden-awakening .spark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0;
+  background: #ffe6a0;
+  box-shadow: 0 0 8px #ffbd48, 0 0 18px rgba(255,170,50,.7);
+}
+.golden-awakening .s1 { --x:-90px; --y:-115px; }
+.golden-awakening .s2 { --x:95px; --y:-88px; }
+.golden-awakening .s3 { --x:-112px; --y:65px; }
+.golden-awakening .s4 { --x:108px; --y:92px; }
+.golden-awakening .s5 { --x:-45px; --y:145px; }
+.golden-awakening .s6 { --x:48px; --y:138px; }
+
+.invitation-gate.opening .golden-awakening {
+  opacity: 1;
+}
+.invitation-gate.opening .golden-awakening::before {
+  animation: sealBurst .92s cubic-bezier(.16,.78,.28,1) both;
+}
+.invitation-gate.opening .golden-awakening::after {
+  animation: auraBurst 1.18s ease-out both;
+}
+.invitation-gate.opening .golden-awakening .ray {
+  animation: goldenRay .92s ease-out both;
+}
+.invitation-gate.opening .golden-awakening .spark {
+  animation: goldenSpark 1.05s ease-out both;
+}
+
+.invitation-gate.opening .invite-seal {
+  animation: sealAwaken .82s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.invitation-gate.opening .invite-flap {
+  transition-delay: .58s;
+}
+
+.invitation-gate.opening .invite-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-18%) scale(1.015);
+  transition-delay: .72s, .72s, .72s, .72s;
+}
+
+.invitation-gate.opening .invite-envelope::before,
+.invitation-gate.opening .invite-envelope::after {
+  animation: embossGlow 1.05s ease-out both;
+}
+
+@keyframes sealBurst {
+  0%   { opacity:0; transform:translate(-50%,-50%) scale(.08); }
+  22%  { opacity:1; }
+  58%  { opacity:1; transform:translate(-50%,-50%) scale(1.15); }
+  100% { opacity:0; transform:translate(-50%,-50%) scale(1.72); }
+}
+@keyframes auraBurst {
+  0%   { opacity:0; transform:translate(-50%,-50%) scale(.05); }
+  35%  { opacity:.95; }
+  100% { opacity:0; transform:translate(-50%,-50%) scale(1.8); }
+}
+@keyframes goldenRay {
+  0%   { opacity:0; height:18px; }
+  25%  { opacity:.92; }
+  100% { opacity:0; height:190px; }
+}
+@keyframes goldenSpark {
+  0%   { opacity:0; transform:translate(-50%,-50%) scale(.2); }
+  22%  { opacity:1; }
+  100% { opacity:0; transform:translate(calc(-50% + var(--x)), calc(-50% + var(--y))) scale(.1); }
+}
+@keyframes sealAwaken {
+  0%   { transform:translate(-50%,-50%) scale(1); opacity:1; }
+  22%  { transform:translate(-50%,-50%) scale(1.08); opacity:1;
+         box-shadow:0 0 18px rgba(255,221,138,.75),0 0 50px rgba(255,168,47,.48); }
+  55%  { transform:translate(-50%,-50%) scale(.94); opacity:1; }
+  100% { transform:translate(-50%,-50%) scale(.36); opacity:0; }
+}
+@keyframes embossGlow {
+  0%   { color:rgba(210,164,86,.34); text-shadow:0 1px rgba(255,225,158,.12),0 -1px rgba(20,0,7,.65); }
+  42%  { color:rgba(255,218,128,.88); text-shadow:0 0 8px rgba(255,194,74,.9),0 0 22px rgba(255,141,34,.55); }
+  100% { color:rgba(210,164,86,.20); text-shadow:none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .golden-awakening { display:none; }
+}
+
 </style>
 <meta content="Gopika &amp; Siva — Wedding Celebrations" property="og:title"/><meta content="Join us for our Kerala and Telugu wedding celebrations on 26 and 31 December 2026." property="og:description"/><meta content="website" property="og:type"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/" property="og:url"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/social-preview.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="Gopika &amp; Siva — Wedding Celebrations" name="twitter:title"/><meta content="Two traditions. One celebration. 26 &amp; 31 December 2026." name="twitter:description"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/social-preview.jpg" name="twitter:image"/><link href="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/" rel="canonical"/><link href="favicon.ico" rel="icon"/><link href="favicon-32.png" rel="icon" sizes="32x32"/><link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/></head>
 <body>
@@ -1621,6 +1809,13 @@ html.invitation-locked body { overflow: hidden; }
       <div class="invite-panel invite-panel-right"></div>
       <div class="invite-panel invite-panel-bottom"></div>
       <div class="invite-flap"></div>
+
+      <div class="golden-awakening" aria-hidden="true">
+        <i class="ray r1"></i><i class="ray r2"></i><i class="ray r3"></i><i class="ray r4"></i>
+        <i class="ray r5"></i><i class="ray r6"></i><i class="ray r7"></i><i class="ray r8"></i>
+        <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span>
+        <span class="spark s4"></span><span class="spark s5"></span><span class="spark s6"></span>
+      </div>
 
       <button class="invite-seal" id="openInvitation" type="button" aria-label="Open invitation">
         <img src="Logo_GS.png" alt="G and S">
@@ -2004,8 +2199,8 @@ if (shareWebsiteButton) {
     seal.disabled = true;
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const revealDelay = reduced ? 120 : 2100;
-    const removeDelay = reduced ? 240 : 3000;
+    const revealDelay = reduced ? 120 : 2850;
+    const removeDelay = reduced ? 240 : 3700;
 
     window.setTimeout(() => {
       gate.classList.add("revealing");
