@@ -1,3 +1,12 @@
+Gopika & Siva Wedding Website — Wedding Edition 4.7
+
+COLOR HARMONY UPDATE
+- Invitation opening now uses the same burgundy family as the main website.
+- Full-screen opening background uses the website hero gradient:
+  #4b1526 → #74233a → #551829
+- Envelope folds remain slightly darker for depth, using the existing brand maroon/deep-maroon colors.
+- Ornamentation, G&S seal, animation and all website content remain unchanged.
+
 Gopika & Siva Wedding Website — Wedding Edition 4.6
 
 REFERENCE-MATCH OPENING
