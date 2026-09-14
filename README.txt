@@ -1,3 +1,16 @@
+Gopika & Siva Wedding Website — Wedding Edition 4.6
+
+REFERENCE-MATCH OPENING
+- Narrower luxury burgundy invitation, closer to the supplied reference.
+- Detailed embossed floral vines with subtle peacock-inspired curves.
+- Gold lotus motifs beside the seal.
+- Ivory/cream wax-style G&S Ganesha seal.
+- Thin gold piping along the envelope fold edges.
+- "PLEASE CLICK FOR INVITATION" on the closed invitation.
+- Golden activation glow, rays and sparks after clicking.
+- Flap opens, cream invitation rises, then the existing website appears.
+- Cream card remains completely hidden before click.
+
 Gopika & Siva Wedding Website — Wedding Edition 4.5
 
 OPENING EXPERIENCE
