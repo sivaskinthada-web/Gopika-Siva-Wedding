@@ -1,3 +1,16 @@
+Gopika & Siva Wedding Website — Wedding Edition 4.5
+
+OPENING EXPERIENCE
+- Dark burgundy premium invitation envelope
+- G&S Ganesha gold seal
+- Peacock-inspired gold embossing
+- Lotus gold embossing
+- "PLEASE CLICK FOR INVITATION"
+- Golden seal illumination/fire-like burst
+- Seal unlocks, flap opens, ivory invitation card rises
+- Existing wedding website appears after the reveal
+- HTML/CSS/JS only; no opening animation image required
+
 Gopika & Siva Wedding Website — Wedding Edition 4.2
 
 REFERENCE-INSPIRED OPENING
