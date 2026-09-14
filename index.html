@@ -1649,6 +1649,114 @@ html.invitation-locked body {
   }
 }
 
+
+/* Wedding Edition 4.1 — Cinematic sealed-envelope opening */
+.invitation-gate{
+  --env-gold:#e9cf92;
+  padding:22px;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(128,35,59,.30) 0%, rgba(69,13,29,.12) 38%, transparent 62%),
+    linear-gradient(160deg,#2c0711 0%,#4b1020 52%,#26060e 100%);
+}
+.invitation-gate::before{inset:18px;border-color:rgba(233,207,146,.14)}
+.gate-ambient{display:none}
+.envelope-stage{width:min(520px,94vw);perspective:1800px}
+.gate-kicker{
+  margin:0 0 30px;
+  color:rgba(233,207,146,.76);
+  font-size:.61rem;
+  letter-spacing:.34em
+}
+.envelope{
+  width:min(390px,84vw);
+  aspect-ratio:1.52/1;
+  cursor:pointer;
+  filter:drop-shadow(0 28px 32px rgba(0,0,0,.42));
+  transition:transform .35s ease,filter .35s ease
+}
+.envelope:hover{transform:translateY(-3px);filter:drop-shadow(0 34px 38px rgba(0,0,0,.46))}
+.envelope-back{
+  border-radius:3px;
+  background:linear-gradient(145deg,#7b2942 0%,#681d36 50%,#541426 100%);
+  border-color:rgba(233,207,146,.16)
+}
+.envelope-back::after{display:none}
+.invitation-card{
+  z-index:2;
+  left:7.5%;right:7.5%;top:7%;
+  height:84%;
+  padding:22px 20px;
+  transform:translateY(38%) scale(.985);
+  transform-origin:center bottom;
+  background:
+    linear-gradient(rgba(255,253,246,.96),rgba(255,249,237,.98)),
+    #fffaf0;
+  border:1px solid rgba(189,152,82,.46);
+  box-shadow:0 12px 28px rgba(0,0,0,.20);
+  transition:transform 1.18s cubic-bezier(.18,.78,.22,1),box-shadow 1s ease
+}
+.card-monogram{width:50px;height:50px;margin-bottom:5px}
+.card-small,.card-date{font-size:.50rem;letter-spacing:.19em}
+.invitation-card h2{font-size:clamp(2rem,7vw,3rem);margin:6px 0}
+.envelope-left{background:linear-gradient(135deg,#76233d,#581428)}
+.envelope-right{background:linear-gradient(225deg,#702139,#511225)}
+.envelope-bottom{background:linear-gradient(0deg,#4a0e20,#681a32 86%)}
+.envelope-flap{
+  background:linear-gradient(155deg,#822b45 0%,#671a33 58%,#581327 100%);
+  border-top-color:rgba(233,207,146,.16);
+  transition:transform 1.05s cubic-bezier(.22,.74,.22,1),z-index 0s linear .54s
+}
+.wax-seal{
+  top:45%;
+  width:74px;height:74px;
+  cursor:pointer;
+  background:
+    radial-gradient(circle at 34% 27%,#a6425d 0 5%,#7b203b 24%,#5b1027 68%,#360715 100%);
+  border-color:rgba(233,207,146,.30);
+  box-shadow:0 10px 22px rgba(12,0,4,.42),inset 0 0 0 4px rgba(255,255,255,.025),inset 0 0 0 6px rgba(233,207,146,.08)
+}
+.wax-seal img{width:49px;height:49px}
+.gate-copy{margin-top:26px}
+.gate-copy h1,.gate-copy>p{display:none}
+.open-invitation-button{
+  min-width:auto;min-height:auto;padding:0;
+  color:rgba(255,248,235,.72);
+  background:transparent;border:0;border-radius:0;box-shadow:none;
+  font:500 .68rem/1.4 "Manrope",sans-serif;
+  letter-spacing:.16em;text-transform:uppercase
+}
+.open-invitation-button:hover{transform:none;box-shadow:none;color:var(--env-gold)}
+.open-invitation-button b{color:var(--env-gold);font-size:.65rem}
+.invitation-gate.opening .envelope{transform:translateY(14px)}
+.invitation-gate.opening .wax-seal{
+  opacity:0;
+  transform:translate(-50%,-50%) scale(.45) rotate(-14deg)
+}
+.invitation-gate.opening .envelope-flap{z-index:1;transform:rotateX(179deg)}
+.invitation-gate.opening .invitation-card{
+  z-index:5;
+  transform:translateY(-55%) scale(1.03);
+  box-shadow:0 30px 55px rgba(0,0,0,.28)
+}
+.invitation-gate.opening .gate-copy,.invitation-gate.opening .gate-kicker{
+  animation:gateCopyAway .4s ease forwards
+}
+@media(max-width:600px){
+  .invitation-gate{padding:18px 14px}
+  .gate-kicker{margin-bottom:24px;font-size:.56rem}
+  .envelope{width:min(350px,86vw)}
+  .wax-seal{width:68px;height:68px}
+  .wax-seal img{width:45px;height:45px}
+  .invitation-card{padding:16px 14px}
+  .card-monogram{width:44px;height:44px}
+  .gate-copy{margin-top:25px}
+}
+@media(max-height:680px){
+  .gate-kicker{display:block;margin-bottom:14px}
+  .envelope{width:min(330px,68vw)}
+  .gate-copy{margin-top:16px}
+}
+
 </style>
 <meta content="Gopika &amp; Siva — Wedding Celebrations" property="og:title"/><meta content="Join us for our Kerala and Telugu wedding celebrations on 26 and 31 December 2026." property="og:description"/><meta content="website" property="og:type"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/" property="og:url"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/social-preview.jpg" property="og:image"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="Gopika &amp; Siva — Wedding Celebrations" name="twitter:title"/><meta content="Two traditions. One celebration. 26 &amp; 31 December 2026." name="twitter:description"/><meta content="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/social-preview.jpg" name="twitter:image"/><link href="https://sivaskinthada-web.github.io/Gopika-Siva-Wedding/" rel="canonical"/><link href="favicon.ico" rel="icon"/><link href="favicon-32.png" rel="icon" sizes="32x32"/><link href="favicon-192.png" rel="apple-touch-icon" sizes="192x192"/></head>
 <body>
@@ -1658,7 +1766,7 @@ html.invitation-locked body {
   <div class="envelope-stage">
     <p class="gate-kicker">A wedding invitation</p>
 
-    <div class="envelope" id="weddingEnvelope" aria-hidden="true">
+    <div class="envelope" id="weddingEnvelope" role="button" tabindex="0" aria-label="Open wedding invitation">
       <div class="envelope-back"></div>
 
       <div class="invitation-card">
@@ -1682,7 +1790,7 @@ html.invitation-locked body {
       <h1 id="gateTitle">Gopika <span>&amp;</span> Siva</h1>
       <p>The stars wrote our story; now we begin to live it.</p>
       <button class="open-invitation-button" id="openInvitation" type="button">
-        <span>Open Invitation</span>
+        <span>Tap the seal to open</span>
         <b aria-hidden="true">✦</b>
       </button>
     </div>
@@ -2049,19 +2157,19 @@ if (shareWebsiteButton) {
 (() => {
   const gate = document.getElementById("invitationGate");
   const button = document.getElementById("openInvitation");
-  if (!gate || !button) return;
+  const envelope = document.getElementById("weddingEnvelope");
+  if (!gate || !button || !envelope) return;
 
   document.documentElement.classList.add("invitation-locked");
 
   const openInvitation = () => {
     if (gate.classList.contains("opening")) return;
-
     gate.classList.add("opening");
     button.disabled = true;
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const revealDelay = reduced ? 80 : 1450;
-    const removeDelay = reduced ? 180 : 2350;
+    const revealDelay = reduced ? 100 : 2050;
+    const removeDelay = reduced ? 220 : 2850;
 
     window.setTimeout(() => {
       gate.classList.add("revealing");
@@ -2073,6 +2181,13 @@ if (shareWebsiteButton) {
   };
 
   button.addEventListener("click", openInvitation);
+  envelope.addEventListener("click", openInvitation);
+  envelope.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openInvitation();
+    }
+  });
 })();
 
 </script>
