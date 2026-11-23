@@ -2202,6 +2202,9 @@ if (shareWebsiteButton) {
       openInvitation();
     }
   });
+
+  // Automatically begin opening after four seconds if the guest has not clicked.
+  window.setTimeout(openInvitation, 4000);
 })();
 
 </script>
